@@ -10,6 +10,7 @@
 		4D72F0962279DEC900CD76F8 /* AppDynamics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D72F08C2279DEC900CD76F8 /* AppDynamics.framework */; };
 		4D72F09B2279DEC900CD76F8 /* AppDynamicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F09A2279DEC900CD76F8 /* AppDynamicsTests.swift */; };
 		4D72F09D2279DEC900CD76F8 /* AppDynamics.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D72F08F2279DEC900CD76F8 /* AppDynamics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D72F0A72279DF6200CD76F8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F0A62279DF6200CD76F8 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		4D72F0952279DEC900CD76F8 /* AppDynamicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDynamicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D72F09A2279DEC900CD76F8 /* AppDynamicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDynamicsTests.swift; sourceTree = "<group>"; };
 		4D72F09C2279DEC900CD76F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D72F0A62279DF6200CD76F8 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				4D72F08F2279DEC900CD76F8 /* AppDynamics.h */,
 				4D72F0902279DEC900CD76F8 /* Info.plist */,
+				4D72F0A62279DF6200CD76F8 /* Error.swift */,
 			);
 			path = AppDynamics;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					4D72F08B2279DEC900CD76F8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					4D72F0942279DEC900CD76F8 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D72F0A72279DF6200CD76F8 /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		4D72F0A12279DEC900CD76F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.AppDynamics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +372,7 @@
 		4D72F0A22279DEC900CD76F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +397,7 @@
 		4D72F0A42279DEC900CD76F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppDynamicsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +415,7 @@
 		4D72F0A52279DEC900CD76F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AppDynamicsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
