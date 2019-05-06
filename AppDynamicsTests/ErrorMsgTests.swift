@@ -24,9 +24,9 @@ class ErrorMsgTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        let errorMsg = ErrorMsg(message: "Initial message")
+//        let errorMsg = ErrorMsg(message: "Initial message")
 //        errorMsg.printMessage(message: "Bre")
-        XCTAssert(errorMsg.addNumbers(num1: 3, num2: 5) == 8, "Good result")
+//        XCTAssert(errorMsg.addNumbers(num1: 3, num2: 5) == 8, "Good result")
         
     }
     

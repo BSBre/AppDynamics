@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		0301B09F43C2139963ED4634 /* Pods_AppDynamicsClientApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD953FB42E175B8D04C11416 /* Pods_AppDynamicsClientApp.framework */; };
 		08557FABD5D7FE471E8E0E24 /* Pods_AppDynamicsClientAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4CD7761BD32C72591BC9A0 /* Pods_AppDynamicsClientAppTests.framework */; };
-		4D4810B7227A14C000B7078B /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4810B6227A14C000B7078B /* Cat.swift */; };
+		4D1E71C2228030B900EBC47A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E71C1228030B900EBC47A /* App.swift */; };
+		4D1E71C6228030CE00EBC47A /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E71C5228030CE00EBC47A /* Device.swift */; };
+		4D1E71CA228030EB00EBC47A /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E71C9228030EB00EBC47A /* NetworkRequest.swift */; };
+		4D1E71CE2280310100EBC47A /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E71CD2280310100EBC47A /* NetworkRequestError.swift */; };
+		4D1E71D22280311800EBC47A /* Crash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E71D12280311800EBC47A /* Crash.swift */; };
 		4D4810B8227A17B400B7078B /* AppDynamics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D72F08C2279DEC900CD76F8 /* AppDynamics.framework */; };
 		4D4810B9227A17B400B7078B /* AppDynamics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D72F08C2279DEC900CD76F8 /* AppDynamics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D72F0962279DEC900CD76F8 /* AppDynamics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D72F08C2279DEC900CD76F8 /* AppDynamics.framework */; };
 		4D72F09B2279DEC900CD76F8 /* AppDynamicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F09A2279DEC900CD76F8 /* AppDynamicsTests.swift */; };
 		4D72F09D2279DEC900CD76F8 /* AppDynamics.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D72F08F2279DEC900CD76F8 /* AppDynamics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D72F0A72279DF6200CD76F8 /* ErrorMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F0A62279DF6200CD76F8 /* ErrorMsg.swift */; };
+		4D72F0A72279DF6200CD76F8 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F0A62279DF6200CD76F8 /* Controller.swift */; };
 		4D72F0AF2279EA9600CD76F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F0AE2279EA9600CD76F8 /* AppDelegate.swift */; };
 		4D72F0B12279EA9600CD76F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F0B02279EA9600CD76F8 /* ViewController.swift */; };
 		4D72F0B42279EA9600CD76F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D72F0B22279EA9600CD76F8 /* Main.storyboard */; };
@@ -69,14 +73,18 @@
 		340DC3F9EA6C9BDBBDD54B17 /* Pods-AppDynamicsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDynamicsTests.release.xcconfig"; path = "Target Support Files/Pods-AppDynamicsTests/Pods-AppDynamicsTests.release.xcconfig"; sourceTree = "<group>"; };
 		3D31D50626A03A617C4D2665 /* Pods-AppDynamics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDynamics.debug.xcconfig"; path = "Target Support Files/Pods-AppDynamics/Pods-AppDynamics.debug.xcconfig"; sourceTree = "<group>"; };
 		41E095249BC76FFAFEE5F980 /* Pods_AppDynamics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppDynamics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D4810B6227A14C000B7078B /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		4D1E71C1228030B900EBC47A /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		4D1E71C5228030CE00EBC47A /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		4D1E71C9228030EB00EBC47A /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		4D1E71CD2280310100EBC47A /* NetworkRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
+		4D1E71D12280311800EBC47A /* Crash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crash.swift; sourceTree = "<group>"; };
 		4D72F08C2279DEC900CD76F8 /* AppDynamics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppDynamics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D72F08F2279DEC900CD76F8 /* AppDynamics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDynamics.h; sourceTree = "<group>"; };
 		4D72F0902279DEC900CD76F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D72F0952279DEC900CD76F8 /* AppDynamicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppDynamicsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D72F09A2279DEC900CD76F8 /* AppDynamicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDynamicsTests.swift; sourceTree = "<group>"; };
 		4D72F09C2279DEC900CD76F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D72F0A62279DF6200CD76F8 /* ErrorMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMsg.swift; sourceTree = "<group>"; };
+		4D72F0A62279DF6200CD76F8 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		4D72F0AC2279EA9600CD76F8 /* AppDynamicsClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDynamicsClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D72F0AE2279EA9600CD76F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D72F0B02279EA9600CD76F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1E71BF2280306900EBC47A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D1E71C1228030B900EBC47A /* App.swift */,
+				4D1E71C5228030CE00EBC47A /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D1E71C02280307200EBC47A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D72F0A62279DF6200CD76F8 /* Controller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4D1E71D322806C6800EBC47A /* DatabaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				4D1E71C9228030EB00EBC47A /* NetworkRequest.swift */,
+				4D1E71CD2280310100EBC47A /* NetworkRequestError.swift */,
+				4D1E71D12280311800EBC47A /* Crash.swift */,
+			);
+			path = DatabaseModel;
+			sourceTree = "<group>";
+		};
 		4D72F0822279DEC900CD76F8 = {
 			isa = PBXGroup;
 			children = (
@@ -164,10 +199,11 @@
 		4D72F08E2279DEC900CD76F8 /* AppDynamics */ = {
 			isa = PBXGroup;
 			children = (
+				4D1E71D322806C6800EBC47A /* DatabaseModel */,
+				4D1E71C02280307200EBC47A /* Controller */,
+				4D1E71BF2280306900EBC47A /* Model */,
 				4D72F08F2279DEC900CD76F8 /* AppDynamics.h */,
 				4D72F0902279DEC900CD76F8 /* Info.plist */,
-				4D72F0A62279DF6200CD76F8 /* ErrorMsg.swift */,
-				4D4810B6227A14C000B7078B /* Cat.swift */,
 			);
 			path = AppDynamics;
 			sourceTree = "<group>";
@@ -554,8 +590,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D4810B7227A14C000B7078B /* Cat.swift in Sources */,
-				4D72F0A72279DF6200CD76F8 /* ErrorMsg.swift in Sources */,
+				4D1E71CA228030EB00EBC47A /* NetworkRequest.swift in Sources */,
+				4D1E71D22280311800EBC47A /* Crash.swift in Sources */,
+				4D1E71CE2280310100EBC47A /* NetworkRequestError.swift in Sources */,
+				4D1E71C2228030B900EBC47A /* App.swift in Sources */,
+				4D72F0A72279DF6200CD76F8 /* Controller.swift in Sources */,
+				4D1E71C6228030CE00EBC47A /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
