@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+  # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
 target 'AppDynamics' do
@@ -7,13 +7,11 @@ target 'AppDynamics' do
 
   # Pods for AppDynamics
     pod 'RealmSwift'
-    pod 'Alamofire', '~> 5.0.0-beta.5'
 
   target 'AppDynamicsTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'RealmSwift'
-    pod 'Alamofire', '~> 5.0.0-beta.5'
   end
 
 end
@@ -23,10 +21,12 @@ target 'AppDynamicsClientApp' do
   use_frameworks!
 
   # Pods for AppDynamicsClientApp
+  pod 'Alamofire', '~> 5.0.0-beta.5'
 
   target 'AppDynamicsClientAppTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Alamofire', '~> 5.0.0-beta.5'
   end
 
 end

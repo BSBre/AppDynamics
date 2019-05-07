@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 public class Controller {
     internal let message: String
@@ -52,4 +51,5 @@ public class Controller {
 //
 //        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
+
 }

@@ -10,12 +10,22 @@ import UIKit
 import AppDynamics
 import CoreTelephony
 import CoreLocation
+import Alamofire
+
+typealias DownloadComplete = () -> ()
+
+let BASE_URL = "https://api.nasa.gov/planetary/apod?api_key="
+let API_KEY = "VZcZ5I1k2gRgsOPJSp5tMI3g5TiN7udYmee0Byvu"
+
+let CURRENT_WEATHER_URL = "\(BASE_URL)\(API_KEY)"
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     let geoCoder = CLGeocoder()
-
+    @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var img: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let controller = Controller(message: "bre")
@@ -36,7 +46,34 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //            locationManager.startMonitoringSignificantLocationChanges()
         }
         
+        let nasa = NASA_APOD()
+        nasa.downloadDetails {
+            print("Finished")
+        }
         
+        btn.layer.cornerRadius = btn.frame.height / 2
+        
+        let url = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png")
+        let data = try? Data(contentsOf: url!)
+        
+        img.image = UIImage(data: data!)
+        
+    }
+    
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let destinationViewController = mainStoryboard.instantiateViewController(withIdentifier: "NasaController") as? NasaController else {
+            print("Couldn't find the view controller")
+            return
+        }
+        destinationViewController.modalTransitionStyle = .crossDissolve
+        present(destinationViewController, animated: true, completion: nil)
+    }
+    
+    func downloadWeatherDetails() {
+        let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)
+        print("Weather url: \(currentWeatherURL?.absoluteString ?? "Error")")
         
     }
     
