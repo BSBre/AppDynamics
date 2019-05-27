@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fAF-sS-cKL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outpost" translatesAutoresizingMaskIntoConstraints="NO" id="Na4-ba-hEF">
+                                <rect key="frame" x="0.0" y="378" width="414" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="3Lp-4K-Qln"/>
+                                    <constraint firstAttribute="height" constant="140" id="NaT-EB-FNx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Na4-ba-hEF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HJB-YV-SpY"/>
+                            <constraint firstItem="fAF-sS-cKL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ON6-kz-KlB"/>
+                            <constraint firstItem="fAF-sS-cKL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SPx-X8-YIB"/>
+                            <constraint firstItem="Na4-ba-hEF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aZX-Jh-PFz"/>
+                            <constraint firstItem="fAF-sS-cKL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hHy-eB-jlW"/>
+                            <constraint firstItem="Na4-ba-hEF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kzZ-xM-4Fk"/>
+                            <constraint firstItem="fAF-sS-cKL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zRw-LA-djv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1280" height="720"/>
+        <image name="outpost" width="1102" height="361"/>
+    </resources>
+</document>

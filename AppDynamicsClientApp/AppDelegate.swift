@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        //myLibrary.init()
+//        NSSetUncaughtExceptionHandler { (nsException) in
+            // update database
+            // check if database is updated correctly
+            // if so, truncate and send to server
+            
+//            print(nsException.callStackSymbols)
+//        }
         return true
     }
 

@@ -14,22 +14,21 @@ import Alamofire
 
 typealias DownloadComplete = () -> ()
 
-let BASE_URL = "https://api.nasa.gov/planetary/apod?api_key="
-let API_KEY = "VZcZ5I1k2gRgsOPJSp5tMI3g5TiN7udYmee0Byvu"
-
-let CURRENT_WEATHER_URL = "\(BASE_URL)\(API_KEY)"
-
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     let geoCoder = CLGeocoder()
-    @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var logIn: RoundButton!
     @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var signUp: RoundButton!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var outpostUrl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let controller = Controller(message: "bre")
-        
         
         print(controller.addNumbers(num1: 2, num2: 2))
         print("Success Realm initialization!")
@@ -43,36 +42,61 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
-//            locationManager.startMonitoringSignificantLocationChanges()
         }
         
-        let nasa = NASA_APOD()
-        nasa.downloadDetails {
-            print("Finished")
-        }
+        navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 1)
         
-        btn.layer.cornerRadius = btn.frame.height / 2
+        mainView.layer.cornerRadius = 20
         
-        let url = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png")
-        let data = try? Data(contentsOf: url!)
-        
-        img.image = UIImage(data: data!)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapGesture))
+        tap.numberOfTapsRequired = 1
+        outpostUrl.isUserInteractionEnabled = true
+        outpostUrl.addGestureRecognizer(tap)
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+//        navigationController?.navigationItem.backBarButtonItem?.title = "Back bre"
+//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Nasa", size: 17)!]
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
     
-    @IBAction func buttonTapped(_ sender: Any) {
+    override func viewWillDisappear(_ animated: Bool) {
+//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Nasa", size: 17)!]
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    @objc func tapGesture(_ sender: Any) {
+        let url = "https://outpost.rs"
+        print("Clicked breeee")
+        UIApplication.shared.open(NSURL(string: url)! as URL)
+    }
+    
+//    @IBAction func signUpButtonTapped(_ sender: Any) {
+//        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        guard let destinationViewController = mainStoryboard.instantiateViewController(withIdentifier: "SignUpController") as? SignUpController else {
+//            print("Couldn't find the view controller")
+//            return
+//        }
+//        destinationViewController.modalTransitionStyle = .crossDissolve
+//
+//        present(destinationViewController, animated: true, completion: nil)
+//    }
+    
+    @IBAction func logInButtonTapped(_ sender: Any) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let destinationViewController = mainStoryboard.instantiateViewController(withIdentifier: "NasaController") as? NasaController else {
+        
+        guard let destinationViewController = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController") as? NavigationController else {
             print("Couldn't find the view controller")
             return
         }
+        
         destinationViewController.modalTransitionStyle = .crossDissolve
         present(destinationViewController, animated: true, completion: nil)
     }
     
     func downloadWeatherDetails() {
-        let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)
+        let currentWeatherURL = URL(string: CURRENT_NASA_APOD_URL)
         print("Weather url: \(currentWeatherURL?.absoluteString ?? "Error")")
         
     }

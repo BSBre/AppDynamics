@@ -9,11 +9,16 @@
 import Foundation
 import Alamofire
 
+let API_KEY = "VZcZ5I1k2gRgsOPJSp5tMI3g5TiN7udYmee0Byvu"
+let BASE_NASA_APOD_URL = "https://api.nasa.gov/planetary/apod?api_key="
+let CURRENT_NASA_APOD_URL = "\(BASE_NASA_APOD_URL)\(API_KEY)"
+
 class NASA_APOD {
     var _title: String!
     var _imageUrl: String!
     var _description: String!
     var _date: String!
+    
     
     var title: String {
         if _title == nil {
@@ -48,8 +53,10 @@ class NASA_APOD {
         return _date
     }
     
-    func downloadDetails(completed: DownloadComplete){
-        let currentNASA_URL = URL(string: CURRENT_WEATHER_URL)!
+    func downloadDetails(completion: @escaping () -> ()){
+        let currentNASA_URL = URL(string: CURRENT_NASA_APOD_URL)!
+        // Use NetworkReachabilityManager for network info
+        // let sessionManager =
         AF.request(currentNASA_URL).responseJSON { response in
             let result = response.value
             if let dict = result as? Dictionary<String, AnyObject> {
@@ -70,7 +77,7 @@ class NASA_APOD {
                 
                 
             }
+            completion()
         }
-        completed()
     }
 }
